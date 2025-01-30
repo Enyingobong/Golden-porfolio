@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+body{
+    min-height: 100vh;
+    background: #d8e2e9;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    max-width: 30rem;
+    width: 80%;
+    background: #b3ebd5;
+    padding: 1rem;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 80%;
+    color: #b9db23;
+    margin-bottom: 1.5rem;
+}
+.todo_input_btn_box{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+#todo_input::placeholder{
+    font-size: 1.1rem;
+    color: #702323;
+}
+#todo_input{
+    width: 70%;
+    padding: 1rem;
+    outline: none;
+    border: 2px solid #234E70;
+    font-size: 1.2rem;
+    color: #234E70;
+}
+.todo_add_btn{
+    width: 30%;
+    background: #557023;
+    color: #FBFBBE;
+    font-size: 1.5rem;
+}
+.todo_list_lis{
+    background: #2e9662;
+    color: #FBFBBE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.7rem;
+
+}
+li div:last-child{
+    display: flex;
+    gap: 1rem;
+}
+.done, .remove{
+    background: transparent;
+    color: #FBFBBE;
+    font-size: 1rem;
+    border: 2px solid #FBFBBE;
+    padding: 0.2rem 0.4rem;
+}
+.done:hover,.remove:hover{
+    background: #FBFBBE;
+    color: #237046;
+}
