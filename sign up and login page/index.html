@@ -3,57 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up and Sign In form</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Input validator</title>
 </head>
 <body>
-
-    <section class="container">
-       <div class="content">
-          <h1>Welcome to Prefloconsult</h1>
+    <div class="form-container">
+        <div class="logo">
+            <img src="Gold Elegant Business Card_20250103_195640_0000.png" alt="company logo"  width="280px" height="200px">
         </div>
-           
-             <!--Sign In Form-->
-             <div id="sign-in-form">
-                <h2>Sign In</h2>
-              </div>                    <form action="">
-                        <div class="input-box">
-                            <input type="text" placeholder="username" required>
-                            <i class="bx bxs-user"></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="text" placeholder="password" required>
-                            <i class="bx bxs-lock-alt"></i>
-                        </div>
-                        <div class="forgot-link">
-                            <a href="#">forgot password</a>
-                            <i class="bx bxs-user"></i>
-                        </div>
-                    <button onclick="signin()"><i class="fas fa-user-check"></i>Sign In</button>
-                    <p>Already have an account? <a href="#" onclick="toggleForm('signin-form')">Sign In</a></p>
-
-                    <!--Sign Up Form-->
+        <section class="container">
+            <div class="content">
+               <h1>Welcome to Prefloconsult</h1>
+             </div>
+         <form id="form" class="form"></form>
              <div id="signup-form">
                 <h2>Sign In</h2>
               </div>
                     <form action="">
                         <div class="input-box">
-                            <input type="text" placeholder="username" required>
+                            <input type="text" id="name" placeholder=" Enter username" required>
+                            <span style="color: brown;" id="name_error"></span>
                             <i class="bx bxs-user"></i>
                         </div>
                         <div class="input-box">
-                            <input type="text" placeholder="password" required>
+                            <input type="text" id="email" placeholder="Enter email" required>
                             <i class="bx bxs-lock-alt"></i>
+                            <span style="color: brown;" id="email_error"></span>
                         </div>
                         <div class="input-box">
-                            <input type="Confirm password" placeholder=" Confirm Password" required>
+                            <input type="text" id="password" placeholder="Enter password" required>
+                            <i class="bx bxs-lock-alt"></i>
+                            <span style="color: brown;" id="password_error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input type="Confirm password" id="confirm password" placeholder="Enter Confirm Password" required>
                             <i class="bx bxs-user"></i>
                         </div>
-                    <button onclick="signin()"><i class="fas fa-user-check"></i>Sign Up</button>
-                    <p>Don't have an account? <a href="#" onclick="toggleForm('signin-form')">Sign Up</a></p>
-     </section>
+                        
+                    <p>Don't have an account?</p>
+                    <button type="submit" class="btn">Sign Up</button>
+                        
+                    <p>Already have an account? </p>
+                    <button type="submit" class="btn">Login</button><br><br>
 
-     <script src="scripts.js"></script>
+                        <div class="forgot-link">
+                            <a href="#">forgot password</a>
+                            <i class="bx bxs-user"></i>
+                        </div>
+        
+                        <p>or Login with social platform</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="bx bxl-google"></i></a>
+                            <a href="#"><i class="bx bxl-facebook"></i></a>
+                            <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                        </div>
+     </section>
+            </div>
+        </form>
+        <script src="script.js"></script>
 </body>
 </html>
