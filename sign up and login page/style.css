@@ -1,20 +1,38 @@
-/*set background image for the entire body*/
-body{
-    background-image: url('Preflo\ Consult\ logo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #333;
-    height: 100vh;
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+*{
     margin: 0;
-    font-family: Arial, sans-serif;
-    color:rgb(131, 226, 42);
-    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
     display: flex;
     justify-content: center;
-}	
+    min-height: 100vh;
+    background: linear-gradient(90deg,#e2e2e2,#a1cc2a);
+}
 
-/*Container with reduced background*/
+.form-box{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+}
+    
+.container.active.form-box{
+    right: 50%;
+}
+
 .container{
     background-color: #fff;
     padding: 50px;
@@ -42,7 +60,6 @@ h2{
     transform: translateY(-50%);
     color: #888;
 }
-
 input{
     width: 80%;
     padding: 10px 10px 10px 35px;
@@ -51,34 +68,65 @@ input{
     border-radius: 5px;
     font-size: 16px;
 }
-
-button{
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color:wheat;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
- 
-button i{
-    margin-right: 8px;
+.span style{
+    color: #bd5220;
 }
 
 p{
     margin-top: 15px;
 }
 
-a{
-    color: #007bff;
-    text-decoration: navajowhite;
+.forgot-link{
+    margin: -15px 0 15px;
 }
 
-a:hover{
-    text-decoration: underline;
+.forgot-link a{
+    font-size: 14.5px;
+    color: #333;
+    text-decoration: none;
 }
 
+.btn{
+    width: 80%;
+    height: 40px;
+    background: #e6d92d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+.btn-field button{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #333;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+}
 
+.social-icons a{
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid#ccc;
+    border-radius: 8px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 8px;
+}
